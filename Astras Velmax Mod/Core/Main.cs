@@ -109,9 +109,8 @@ public class Main : MonoBehaviour
     private void VelMaxMod()
     {
         if (GTPlayer.Instance == null) return;
-
-        float mult = InputSelector.Pressed ? VelMulti : 1f;
-        float max = InputSelector.Pressed ? VelMax : 1f;
+        float mult = (Velmax && InputSelector.Pressed) ? VelMulti : 1f;
+        float max = (Velmax && InputSelector.Pressed) ? VelMax : 1f;
         var Left = GTPlayer.Instance.LeftHand.surfaceOverride;
         var Right = GTPlayer.Instance.RightHand.surfaceOverride;
         if (Left != null)
