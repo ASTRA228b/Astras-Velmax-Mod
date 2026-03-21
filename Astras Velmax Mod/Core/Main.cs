@@ -74,6 +74,7 @@ public class Main : MonoBehaviour
         VelMulti = GUILayout.HorizontalSlider(VelMulti, 0.001f, 12f, SliderStyle, SliderThumbStyle);
         GUILayout.Label($"VelMult: {VelMulti:F3}");
         VelMax = GUILayout.HorizontalSlider(VelMax, 0.001f, 10f, SliderStyle, SliderThumbStyle);
+        GUILayout.Label($"VelMax: {VelMax:F3}");
         GUILayout.Space(5f);
         GUILayout.Label("Change Input:");
         int OldIndex = InputSelector.SelectedIndex;
@@ -89,8 +90,8 @@ public class Main : MonoBehaviour
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Reset", Buttonss))
         {
-            VelMulti = 1f;
-            VelMax = 1f;
+            VelMulti = 0.001f;
+            VelMax = 0.001f;
         }
         if (GUILayout.Button("Max", Buttonss))
         {
